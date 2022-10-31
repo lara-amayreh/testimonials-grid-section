@@ -17,18 +17,24 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-color: var(--secondery-Lightgrayishblue);
     font-size: 13px;
+    min-width: 100vw;
+    min-height: 100vh;
 
 }
 
-
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 
 .container {
-    min-width: 100vw;
-    min-height: 100vh;
+
     place-content: center;
     display: grid;
     gap: 25px;
-    padding: 50px 20px;
     grid-template-columns: 1fr;
     grid-template-areas: "p1"
         "p2"
@@ -78,6 +84,11 @@ body {
 .container .card {
     border-radius: 7px;
     padding: 25px;
+}
+
+.p1 .info>img,
+.p5 img {
+    border: 2px solid rgba(175, 41, 175, 0.89);
 }
 
 .card .info {
@@ -150,7 +161,7 @@ img {
 @media (min-width: 375px) {
     .container {
         max-width: 100%;
-        padding: 50px 30px;
+        padding: 50px 20px;
         gap: 20px;
         grid-template-columns: 1fr;
         grid-template-areas: "p1"
